@@ -49,6 +49,38 @@
 		"Task: fed all the monkeys."  After that, press the blue commit button at the bottom of this window to finalize your commit and
 		prepare it to be uploaded to GitHub.
 	</li>
+	<li>
+		After committing your changes, you still need to upload them to GitHub.  To accomplish this, open the Git menu
+		under VCS again, but this time scroll down and press the green "Push" icon.  A new window will open prompting you
+		to select what to upload to Github.  Normally there is only one option here.  After confirming your selection,
+		press the blue button at the bottom of this window and it will be uploaded to GitHub.  Depending on the size of
+		the project this may take up to a few minutes, so consider this to be some built-in free time.
+	</li>
+	<li>
+		While pushing your changes to Github updates the repository, your local copy will not be updated to reflect any
+		changes your team mates have made since you initially cloned the repository.  To correct this, open the Git menu
+		and select the blue "Pull" button.  This will automatically update your local copy of the project with any new
+		changes made by other contributors.
+	</li>
+	<li>
+		After pulling the most recent version of your project, you can merge your partner's branches into one of your
+		local branches for ease of access.  To do this, go to the bottom right corner of PHPStorm, click on the tab that
+		previously said "Git: Master," and examine the menu that opens up.  If your are not in your local master branch,
+		click on it in this menu and select the "Checkout" option.  This will switch your active branch.  Once you are
+		in the branch you would like to merge into, click on the other branches in the menu and select "merge into current."
+		Merging branches allows you to access all files from all branches from within a single branch.
+	</li>
+	<li>
+		At some point during your project you may find yourself needing to update the main version of the project.  To do
+		this, after merging into and committing one local branch, go to the repository on GitHub, and click on the Code
+		tab.  From here you can see all pushed commits made to the repository.  Find the commit you would like to have
+		serve as the new master branch for the repository, and click on the "New Pull Request" button.  THis will take you
+		to a page where you can fill out some info about your branch and why it should be the new master.  From there,
+		the project leader will decide which pull request to make the new master branch.  At this stage they will have to
+		handle merge conflicts, most likely caused by two files with the same names but different contents. These can be
+		resolved by either replacing one of the conflicting files or by integrating their contents to suit the project's
+		scope and goals.
+	</li>
 </ol>
 </body>
 </html>
