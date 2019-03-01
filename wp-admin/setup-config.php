@@ -40,16 +40,16 @@ require_once( ABSPATH . 'wp-admin/includes/translation-install.php' );
 
 nocache_headers();
 
-// Support wp-config-sample.php one level up, for the develop repo.
-if ( file_exists( ABSPATH . 'wp-config-sample.php' ) ) {
-	$config_file = file( ABSPATH . 'wp-config-sample.php' );
-} elseif ( file_exists( dirname( ABSPATH ) . '/wp-config-sample.php' ) ) {
-	$config_file = file( dirname( ABSPATH ) . '/wp-config-sample.php' );
+// Support wp-config.php one level up, for the develop repo.
+if ( file_exists( ABSPATH . 'wp-config.php' ) ) {
+	$config_file = file( ABSPATH . 'wp-config.php' );
+} elseif ( file_exists( dirname( ABSPATH ) . '/wp-config.php' ) ) {
+	$config_file = file( dirname( ABSPATH ) . '/wp-config.php' );
 } else {
 	wp_die( sprintf(
-		/* translators: %s: wp-config-sample.php */
+		/* translators: %s: wp-config.php */
 		__( 'Sorry, I need a %s file to work from. Please re-upload this file to your WordPress installation.' ),
-		'<code>wp-config-sample.php</code>'
+		'<code>wp-config.php</code>'
 	) );
 }
 
@@ -165,9 +165,9 @@ switch($step) {
 	);
 	?>
 	<strong><?php
-		/* translators: 1: wp-config-sample.php, 2: wp-config.php */
+		/* translators: 1: wp-config.php, 2: wp-config.php */
 		printf( __( 'If for any reason this automatic file creation doesn&#8217;t work, don&#8217;t worry. All this does is fill in the database information to a configuration file. You may also simply open %1$s in a text editor, fill in your information, and save it as %2$s.' ),
-			'<code>wp-config-sample.php</code>',
+			'<code>wp-config.php</code>',
 			'<code>wp-config.php</code>'
 		);
 	?></strong>
@@ -392,10 +392,10 @@ if ( ! /iPad|iPod|iPhone/.test( navigator.userAgent ) ) {
 <?php
 	else :
 		/*
-		 * If this file doesn't exist, then we are using the wp-config-sample.php
+		 * If this file doesn't exist, then we are using the wp-config.php
 		 * file one level up, which is for the develop repo.
 		 */
-		if ( file_exists( ABSPATH . 'wp-config-sample.php' ) )
+		if ( file_exists( ABSPATH . 'wp-config.php' ) )
 			$path_to_wp_config = ABSPATH . 'wp-config.php';
 		else
 			$path_to_wp_config = dirname( ABSPATH ) . '/wp-config.php';
