@@ -54,5 +54,15 @@
     </div>
 </div>
 
+<div class="panel panel-default panel-body">
+    <div>
+        <div>
+            <ul>
+                <?php wp_list_categories('orderby=name&title_li='); ?>
+            </ul>
+        </div>
+    </div>
+</div>
+
 <?php echo get_stylesheet_uri(); ?>
 <?php wp_head(); ?>

@@ -8,3 +8,4 @@ while(have_posts()) : the_post(); ?>
         <p><?php the_excerpt(); ?></p>
     </div>
 <?php endwhile; wp_reset_query(); ?>
+
