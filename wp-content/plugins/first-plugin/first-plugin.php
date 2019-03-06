@@ -9,3 +9,8 @@
  * Description: Project 1 of IS373 class
  * Author: John McMinn
  */
+
+function modify_read_more_link() {
+    return '<a class="more-link" href="' . get_permalink() . '">Read MOAR!!!!</a>';
+}
+add_filter( 'the_content_more_link', 'modify_read_more_link' );
