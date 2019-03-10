@@ -3,8 +3,14 @@
 <div class = "container">
 
     <div class = "jumbotron">
-        <h2>Post Title</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc arcu erat, congue eget ornare et, luctus eget purus. Etiam et risus metus. Nam sed mi tellus. Mauris molestie massa eu metus tempor, in hendrerit arcu adipiscing.</p>
+        <?php query_posts('posts_per_page=1');
+        while(have_posts()) : the_post(); ?>
+            <div>
+                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <p><?php the_excerpt(); ?></p>
+                <p><a class="the_content_more_link" href="' . get_permalink() . '">Continue</a></p>
+            </div>
+        <?php endwhile; wp_reset_query();?>
     </div>
 
     <div class = "panel panel-default panel-body">
