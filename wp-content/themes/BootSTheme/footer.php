@@ -8,7 +8,7 @@
             <div>
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                 <p><?php the_excerpt(); ?></p>
-                <p><a class="the_content_more_link" href="' . get_permalink() . '">Continue</a></p>
+
             </div>
         <?php endwhile; wp_reset_query();?>
     </div>
